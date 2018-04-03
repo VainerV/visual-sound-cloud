@@ -1,13 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="//connect.soundcloud.com/sdk.js"></script>
-    <title>Document</title>
+    <title>Crazy Stream</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="grid.css" rel="stylesheet" type="text/css" />
 </head>
+
+
 <body>
-    
+    <main role="main" class="main-container" aria-live="assertive">
+        <div class="text-logo ">
+            <h1 id="logo">YouTube Mega Search</h1>
+        </div>
+        <div class="submit-form">
+            <form class="js-search-form">
+                <label for="query"></label>
+
+                <div class="row">
+
+                    <div class="col-12 input-fields">
+                        <select id="type-select">
+                            <option value="artist">Artist</option>
+                            <option value="album">Album</option>
+                            <option value="track">Track</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 input-fields">
+                        <input type="text" class="search-text-field" placeholder="Search Criteria" />
+                    </div>
+                    <div class="col-12 input-fields"></div>
+                    <button type="submit" class="search-button" id="submit-search">Search</button>
+                </div>
+
+        </div>
+        </form>
+        </div>
+
+        <h2 class="search-result-logo">Search Results</h2>
+
+        <div class="js-search-results" id="thumbnails-style">
+        </div>
+        <div class="row" id="l-more-b">
+            <button type="submit" class="search-button col-12" id="load-more-videos">Load More</button>
+        </div>
+
+    </main>
+    <script src="indexajax.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
